@@ -25,6 +25,7 @@ A reporter for TAP.
 
 ```
   --no-ansi        Disable ANSI formatting
+  --no-stack       Disable stack retrace 
   --no-progress    Disable progress output during tests
 ```
 

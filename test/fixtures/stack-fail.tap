@@ -1,0 +1,31 @@
+TAP version 13
+# passing test
+ok 1 should be equal
+# main has value
+ok 2 should be equivalent
+# failing test
+not ok 3 should be equal
+  ---
+    operator: equal
+    expected: false
+    actual:   true
+    at: Test.tape (/home/thomas/code/personal/lindease/test/test.js:18:8)
+    stack: |-
+      Error: should be equal
+          at Test.assert [as _assert] (/home/thomas/code/personal/lindease/node_modules/tape/lib/test.js:226:54)
+          at Test.bound [as _assert] (/home/thomas/code/personal/lindease/node_modules/tape/lib/test.js:77:32)
+          at Test.equal (/home/thomas/code/personal/lindease/node_modules/tape/lib/test.js:386:10)
+          at Test.bound [as equal] (/home/thomas/code/personal/lindease/node_modules/tape/lib/test.js:77:32)
+          at Test.tape (/home/thomas/code/personal/lindease/test/test.js:18:8)
+          at Test.bound [as _cb] (/home/thomas/code/personal/lindease/node_modules/tape/lib/test.js:77:32)
+          at Test.run (/home/thomas/code/personal/lindease/node_modules/tape/lib/test.js:96:10)
+          at Test.bound [as run] (/home/thomas/code/personal/lindease/node_modules/tape/lib/test.js:77:32)
+          at Immediate.next [as _onImmediate] (/home/thomas/code/personal/lindease/node_modules/tape/lib/results.js:75:19)
+          at runCallback (timers.js:705:18)
+  ...
+
+1..3
+# tests 3
+# pass  2
+# fail  1
+

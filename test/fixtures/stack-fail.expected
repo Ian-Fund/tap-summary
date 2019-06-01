@@ -1,0 +1,34 @@
+
+[33m# Tests
+[0m
+[G[32m✔ passing test [pass: 1, fail: 0][0m
+[G[32m✔ main has value [pass: 1, fail: 0][0m
+[G[31m✖ failing test [pass: 0, fail: 1][0m
+
+[33m# Summary
+[0m
+[36mplanned: 3[0m
+[36massertions: 3[0m
+[32mpass: 2[0m
+[31mfail: 1[0m
+
+[33m# Fails
+[0m
+[36m[4m## failing test[0m[0m
+[31m  ✖ should be equal[0m
+    operator: equal
+    expected: false
+    actual:   true
+    at: Test.tape (/home/thomas/code/personal/lindease/test/test.js:18:8)
+    stack: |-
+Error: should be equal
+at Test.assert [as _assert] (/home/thomas/code/personal/lindease/node_modules/tape/lib/test.js:226:54)
+at Test.bound [as _assert] (/home/thomas/code/personal/lindease/node_modules/tape/lib/test.js:77:32)
+at Test.equal (/home/thomas/code/personal/lindease/node_modules/tape/lib/test.js:386:10)
+at Test.bound [as equal] (/home/thomas/code/personal/lindease/node_modules/tape/lib/test.js:77:32)
+at Test.tape (/home/thomas/code/personal/lindease/test/test.js:18:8)
+at Test.bound [as _cb] (/home/thomas/code/personal/lindease/node_modules/tape/lib/test.js:77:32)
+at Test.run (/home/thomas/code/personal/lindease/node_modules/tape/lib/test.js:96:10)
+at Test.bound [as run] (/home/thomas/code/personal/lindease/node_modules/tape/lib/test.js:77:32)
+at Immediate.next [as _onImmediate] (/home/thomas/code/personal/lindease/node_modules/tape/lib/results.js:75:19)
+

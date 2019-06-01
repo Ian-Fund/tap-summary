@@ -46,3 +46,16 @@ test('formatter, comment', function (t) {
     }))
 })
 
+test('formatter, stack-fail', function (t) {
+  summarize.Formatter.prototype.prettifyError = function (assertion) {
+    var lines = assertion.error.raw.split('\n')
+    lines.pop()
+    return lines.join('\n')
+  }
+  fs.createReadStream(fixtures('stack-fail.tap'))
+    .pipe(summarize({ duration: false, progress: false }))
+    .pipe(concat({ encoding: 'string' }, function (s) {
+      t.equal(s, fs.readFileSync(fixtures('stack-fail.expected'), 'utf8'))
+      t.end()
+    }))
+})
