@@ -6,12 +6,14 @@ var program = new Command('tap-summary')
 program
   .version(require('../package.json').version)
   .option('--no-ansi', 'Disable ANSI formatting.')
+  .option('--no-stack', 'Disable error stack trace.')
   .option('--no-progress', 'Disable progress output during tests.')
   .parse(process.argv)
 
 var reporter = require('..')({
   ansi: program.ansi,
   progress: program.progress,
+  stack: program.stack,
 })
 
 process.stdin
