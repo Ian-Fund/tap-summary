@@ -8,12 +8,14 @@ program
   .option('--no-ansi', 'Disable ANSI formatting.')
   .option('--no-stack', 'Disable error stack trace.')
   .option('--no-progress', 'Disable progress output during tests.')
+  .option('--no-duration', 'Disable duration calculation for tests.')
   .parse(process.argv)
 
 var reporter = require('..')({
   ansi: program.ansi,
   progress: program.progress,
   stack: program.stack,
+  duration: program.duration,
 })
 
 process.stdin
